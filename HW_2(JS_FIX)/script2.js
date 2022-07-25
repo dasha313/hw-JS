@@ -1,167 +1,134 @@
 /*1*/
 
-let name = prompt('Ваше имя ?');
-alert('Меня зовут ' + name);
-let age = prompt('Ваш возраст ?');
-alert('Мне ' + age + ' лет');
-let city = prompt('Ваш город проживания ?');
-alert('Я проживаю  в городе ' + city);
-let phone = prompt('Ваш номер телефона ?');
-alert('Мой номер телефона ' + phone);
-let email = prompt('Ваш адрус электронной почты ?');
-alert('Мой адрес электронной почты ' + email);
-let company = prompt('В какой компании вы работаете ?');
-alert('Я работаю в компании ' + company);* /
+for (let i = 1; i <= 50; i++) {
+   console.log(i);
+}
+
+console.log('');
+
+for (let i = 35; i >= 8; i--) {
+   console.log(i)
+}
 
 
+console.log('-------------------------------------------------');
 
-/*2*/
 
+/*2 в HTML*/
 
 
 /*3*/
 
-let namber = prompt('Cумма первых трех цифр 111111 равняется сумме вторых трех цифр? Какая сумма первых 1+1+1 ?');
-if (namber == 3) {
-   console.log('Да');
-} else {
-   console.log('Нет');
+let b = 100;
+let summ = 0;
+for (let i = 0; i <= b; i++) {
+   summ = 0;
+   for (let j = 0; j <= i; j++) {
+      summ += j;
+   }
+   console.log('summ' + i + '=' + summ);
 }
 
+
+console.log('-------------------------------------------------');
 
 
 /*4*/
-let peremennai1 = prompt('Что больше 1 или 0? ');
-if (peremennai1 == 1) {
-   console.log('Верно');
-} else {
-   console.log('Неверно');
+
+let a = 1;
+let sum = 0;
+for (let i = 1; i <= a; i++) {
+   console.log(i);
+   sum += i;
 }
+console.log(sum);
+console.log('');
 
-let peremennai2 = prompt('Что больше 0 или 0? ');
-if (peremennai2 == 0) {
-   console.log('Верно');
-} else {
-   console.log('Неверно');
+a = 2;
+sum = 0;
+for (let i = 1; i <= a; i++) {
+   console.log(i);
+   sum += i;
 }
+console.log(sum);
+console.log('');
 
-let peremennai3 = prompt('Что больше -3 или 0? ');
-if (peremennai3 < 0) {
-   console.log('Неверно');
-} else {
-   console.log('Верно');
+a = 3;
+sum = 0;
+for (let i = 1; i <= a; i++) {
+   console.log(i);
+   sum += i;
 }
+console.log(sum);
+console.log('');
 
+a = 4;
+sum = 0;
+for (let i = 1; i <= a; i++) {
+   console.log(i);
+   sum += i;
+}
+console.log(sum);
+console.log('');
 
-
+a = 5;
+sum = 0;
+for (let i = 1; i <= a; i++) {
+   console.log(i);
+   sum += i;
+}
+console.log(sum);
+console.log('-------------------------------------------------');
 
 /*5*/
-let a = 10;
-let b = 2;
-let summ = a + b;
-console.log(summ);
-let razn = a - b;
-console.log(razn);
-let proiz = a * b;
-console.log(proiz);
-let chas = a / b;
-console.log(chas);
-let sum = 45;
-if (sum > 1) {
-   console.log(Math.pow(45, 2));
+
+for (let i = 8; i <= 56; i++) {
+   if (i % 2 == 1) continue;
+   console.log(i);
 }
+console.log('');
 
 
+console.log('-------------------------------------------------');
 
-/*6* -не поняла */
-let aa = 10;
-if (2 < aa < 11) {
-   console.log('Верно');
-} else {
-   console.log('Неверно');
-}
 
-let bb = 2;
-if (6 <= bb < 14) {
-   console.log('Верно');
-} else {
-   console.log('Неверно');
-}
-
+/*6 в HTML*/
 
 
 /*7*/
-let min = prompt('Введите число от 0 до 59');
-if (min >= 0 && min <= 14) {
-   console.log("Первая");
-}
-if (min >= 15 && min <= 30) {
-   console.log("Вторая");
-}
-if (min >= 31 && min <= 45) {
-   console.log("Третья");
-}
-if (min >= 46 && min <= 59) {
-   console.log("Четвертая");
+for (let n = 1000, num = 5; n > 50; num++) {
+   n /= 2;
+   console.log(n);
 }
 
+
+console.log('-------------------------------------------------');
 
 
 /*8*/
-let day = prompt('Введите число от 1 до 31');
-if (day >= 0 && day <= 10) {
-   console.log('Первая');
+
+let v = 0;
+let s = 0;
+let namber;
+while ((namber = prompt("Введите число", 0)) !== "0" && namber != null) {
+   ++v;
+   s += +namber;
 }
-if (day >= 11 && day <= 20) {
-   console.log('Вторая ');
-}
-if (day >= 21 && day <= 31) {
-   console.log('Третья');
-}
+alert("Сумма чисел: " + s + "\nСреднее арифметическое: " + (s / v));
 
 
+console.log('-------------------------------------------------');
 
 
-/*10*/
-let days = prompt('В году 366 дней, в какой из дней (из 366) у вас день рождения ?')
-if (days >= 0 && days <= 31) {
-   console.log('Январь');
+/*9*/
+let str = '4 98 4 6 1 32 4 65 4 3 5 7 89 7 10 1 368 57';
+let nym = '', min, max;
+for (let i = 0; i < str.length; i++) {
+   nym += str[i];
+   if (+str[i] && !+str[i + 1]) {
+      if (typeof min !== 'number' || nym < +min) min = +nym;
+      if (typeof max !== 'number' || nym > +max) max = +nym;
+      nym = '';
+   }
 }
-if (days >= 31 && days <= 60) {
-   console.log('Фефраль');
-}
-if (days >= 60 && days <= 91) {
-   console.log('Март');
-}
-if (days >= 91 && days <= 122) {
-   console.log('Апрель');
-}
-if (days >= 122 && days <= 153) {
-   console.log('Май');
-}
-if (days >= 153 && days <= 183) {
-   console.log('Июнь');
-}
-if (days >= 183 && days <= 214) {
-   console.log('Июль');
-}
-if (days >= 214 && days <= 245) {
-   console.log('Август');
-}
-if (days >= 245 && days <= 275) {
-   console.log('Сентябрь');
-}
-if (days >= 275 && days <= 306) {
-   console.log('Октябрь');
-}
-if (days >= 306 && days <= 336) {
-   console.log('Ноябрь');
-}
-if (days >= 336 && days <= 366) {
-   console.log('Декабрь');
-}
-
-
-
-
-
+console.log('Min:', min, 'Max:', max)
