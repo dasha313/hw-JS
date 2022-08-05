@@ -66,9 +66,10 @@ console.log('');
 /*7*/
 let str2 = 'aa aba abba abbba abca abea';
 console.log(str2);
-console.log(str2.search(/aba/));
-console.log(str2.search(/abba/));
-console.log(str2.search(/abbba/));
+
+console.log(str2.slice(3, 6))
+console.log(str2.slice(7, 11));
+console.log(str2.slice(12, 17));
 
 
 console.log('');
