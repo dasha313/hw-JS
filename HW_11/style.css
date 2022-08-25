@@ -9,6 +9,7 @@ body{
 
 .tabs-container{
    background: beige;
+
 }
 
 ul{
@@ -49,3 +50,6 @@ ul{
    text-decoration: double;
 }
 
+.content{
+   position: relative;
+}
